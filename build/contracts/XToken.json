@@ -1,0 +1,488 @@
+{
+  "contractName": "XToken",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/XToken.sol\":\"XToken\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/XToken.sol\":{\"keccak256\":\"0xff084fc315245d02eeb73b3f3e8e9c23cfe55b336084d203de73fdb7bfa2ea84\",\"urls\":[\"bzz-raw://baf391c1ec68d3d1521a330a5ec8e4672a485a1fd53409fbd0c2a15f941768bf\",\"dweb:/ipfs/QmaU9aMbqvKEgHYHZrkyp1LNocvuoMFFpSQHQQeEX4x7Yg\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.8.0;\n\ninterface XToken {\n  function mint(address to, uint amount) external;\n  function burn(address owner, uint amount) external;\n}",
+  "sourcePath": "/Users/alex/Desktop/Blockchain/ETH-BSC-bridge/ETH-BSC-bridge/contracts/XToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/XToken.sol",
+    "exportedSymbols": {
+      "XToken": [
+        997
+      ]
+    },
+    "id": 998,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 982,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "XToken",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 997,
+        "linearizedBaseContracts": [
+          997
+        ],
+        "name": "XToken",
+        "nameLocation": "35:6:11",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "40c10f19",
+            "id": 989,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "55:4:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 987,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 984,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "68:2:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 989,
+                  "src": "60:10:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 983,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "60:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 986,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "77:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 989,
+                  "src": "72:11:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 985,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "72:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "59:25:11"
+            },
+            "returnParameters": {
+              "id": 988,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:0:11"
+            },
+            "scope": 997,
+            "src": "46:48:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9dc29fac",
+            "id": 996,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "106:4:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 994,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 991,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "119:5:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "111:13:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 990,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "111:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 993,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "131:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "126:11:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 992,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "126:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "110:28:11"
+            },
+            "returnParameters": {
+              "id": 995,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "147:0:11"
+            },
+            "scope": 997,
+            "src": "97:51:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 998,
+        "src": "25:125:11",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:150:11"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/XToken.sol",
+    "exportedSymbols": {
+      "XToken": [
+        997
+      ]
+    },
+    "id": 998,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 982,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "XToken",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 997,
+        "linearizedBaseContracts": [
+          997
+        ],
+        "name": "XToken",
+        "nameLocation": "35:6:11",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "40c10f19",
+            "id": 989,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "55:4:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 987,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 984,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "68:2:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 989,
+                  "src": "60:10:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 983,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "60:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 986,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "77:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 989,
+                  "src": "72:11:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 985,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "72:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "59:25:11"
+            },
+            "returnParameters": {
+              "id": 988,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:0:11"
+            },
+            "scope": 997,
+            "src": "46:48:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9dc29fac",
+            "id": 996,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "106:4:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 994,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 991,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "119:5:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "111:13:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 990,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "111:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 993,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "131:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "126:11:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 992,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "126:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "110:28:11"
+            },
+            "returnParameters": {
+              "id": 995,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "147:0:11"
+            },
+            "scope": 997,
+            "src": "97:51:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 998,
+        "src": "25:125:11",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:150:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-01-15T11:03:29.139Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -22,7 +22,10 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
-
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const privateKeys = ['0xec6945e4ed41b09f5bce8bb28bf49699708047c8e83dd18d7277c5eb31bfa9ab'];
+//,'0x256c5f3ec55a9999e696f965c927b93cb829a9c189779b7538f61c008a3fa8e3']; eth
+//'0xec6945e4ed41b09f5bce8bb28bf49699708047c8e83dd18d7277c5eb31bfa9ab' bsc
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -57,14 +60,18 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    // ropsten: {
-    // provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
-    // network_id: 3,       // Ropsten's id
-    // gas: 5500000,        // Ropsten has a lower block limit than mainnet
-    // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-    // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    // },
+    ethTestnet: {
+      provider: () => new HDWalletProvider(privateKeys, 'https://rinkeby.infura.io/v3/57db96c2522a4420a57dba48a3f25446', 0, 1),
+      network_id: 4, //rinkeby
+      skipDryRun: true
+    },
+    bscTestnet: {
+      provider: () => new HDWalletProvider(privateKeys, `https://data-seed-prebsc-1-s1.binance.org:8545`),
+      networkCheckTimeout: 1000000,
+      timeoutBlocks: 200,
+      network_id: 97,       // Ropsten's id
+      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      }
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
@@ -81,7 +88,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.10",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
